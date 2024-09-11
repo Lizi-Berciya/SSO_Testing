@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="card" style="width: 50%; align-items: center; margin-top: 15%; margin-left: 25%;">
+        <h4 class="card-title" style="margin: 2%;">Testing SSO</h4>
+
+        <div class="input-group mb-3" style="margin-left: 5%; margin-right: 5%;">
+            <label style="padding: 3%;" for="Name">User Name</label>
+            <input class="form-control mx-4" type="text" id="Name" name="Name"><br><br>
+        </div>
+
+        <div class="input-group mb-3" style="margin-left: 5%; margin-right: 5%;">
+            <label style="margin: 3%; padding-right: 12px;" for="Password">Password </label>
+            <input class="form-control mx-4" type="password" id="Password" name="Password"><br><br>
+        </div>
+
+        <a href="https://commondesk.myfreshworks.com/sp/OIDC/753903920336937091/implicit?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.NHVaYe26MbtOYhSKkoKYdFVomg4i8ZJd8_-RU8VNbftc4TSMb4bXP3l3YlNWACwyXPGffz5aXHc6lty1Y2t4SWRqGteragsVdZufDn5BlnJl9pdR_kdVFUsra2rWKEofkZeIC4yWytE58sMIihvo9H1ScmmVwBcQP6XETqYd0aSHp1gOa9RdUPDvoXQ5oqygTqVtxaDr6wUFKrKItgBMzWIdNZ6y7O9E0DhEPTbE9rfBo6KTFsHAZnMg4k68CDp2woYIaXbmYTWcvbzIuHO7_37GT79XdIwkm95QJ7hYC9RiwrV7mesbY4PAahERJawntho0my942XheVLmGwLMBkQ"><button class="btn btn-primary" type="button" id="submit" name="submit"
+            style="align-items: center; padding: 5px 50px 5px">Login</button></a>
+    </div>
+
+</body>
+
+
+<script>
+    const submit_btn = document.getElementById("submit")
+    submit_btn.addEventListener("click", (e) => {
+        console.log("username", document.getElementById("Name").value)
+        console.log("pass", document.getElementById("Password").value)
+
+        document.getElementById("Name").value =''
+        document.getElementById("Password").value= ''
+    })
+
+
+</script>
+
+</html>
